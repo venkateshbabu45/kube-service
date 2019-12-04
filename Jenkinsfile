@@ -11,13 +11,7 @@ pipeline {
         checkout scm
       }
     }
-    stage('Build') {
-      steps {
-        sh 'mvn -B -DskipTests clean package'
-        sh 'echo $USER'
-        sh 'echo whoami'
-      }
-    }
+   
     
   stage('deploy to ECR') {
       steps {

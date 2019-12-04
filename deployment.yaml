@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: address-service
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: address-service
+    spec:
+      containers:
+        - name: address-service
+          image: 508607970941.dkr.ecr.us-east-1.amazonaws.com/address-service:latest
+-----
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: employee-service
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: employee-service
+    spec:
+      containers:
+        - name: employee-service
+          image: 508607970941.dkr.ecr.us-east-1.amazonaws.com/employee-service:latest

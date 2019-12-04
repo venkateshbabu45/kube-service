@@ -12,8 +12,7 @@ spec:
       containers:
         - name: address-service
           image: 508607970941.dkr.ecr.us-east-1.amazonaws.com/address-service:latest
------
-
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
